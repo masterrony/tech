@@ -18,8 +18,8 @@ courseController.get('/', async (req, res) => {
   const sort = req.query._sort
   const order = req.query._sort == 'ASC' ? -1 : 1
 
-  let { courses, totalCount } = await getCourses({ skip, limit, sort, order })
-  res.header('X-Total-Count', totalCount)
+  let { courses, count } = await getCourses({ skip, limit, sort, order })
+  res.header('X-Total-Count', count)
   return res.send(courses)
 })
 

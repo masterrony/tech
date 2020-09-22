@@ -21,4 +21,3 @@ var verifyToken = exports.verifyToken = function verifyToken(req, res, next) {
 
   return next();
 };
-//# sourceMappingURL=verifyToken.js.map

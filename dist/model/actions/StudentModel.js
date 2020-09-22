@@ -172,4 +172,3 @@ var deleteOneStudent = exports.deleteOneStudent = function () {
     return _ref9.apply(this, arguments);
   };
 }();
-//# sourceMappingURL=StudentModel.js.map

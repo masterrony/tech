@@ -11,9 +11,9 @@ const Api = express.Router();
 Api.use('/auth', authController)
 
 // courses api
-Api.use('/courses',  courseController)
+Api.use('/courses', verifyToken, courseController)
 
 // students api
-Api.use('/students',  studentController)
+Api.use('/students', verifyToken, studentController)
 
 export default Api;

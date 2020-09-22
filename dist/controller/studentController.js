@@ -157,4 +157,3 @@ studentController.delete('/:id', function () {
 }());
 
 exports.default = studentController;
-//# sourceMappingURL=studentController.js.map

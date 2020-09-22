@@ -30,10 +30,9 @@ var Api = _express2.default.Router();
 Api.use('/auth', _authController2.default);
 
 // courses api
-Api.use('/courses', _courseController2.default);
+Api.use('/courses', _verifyToken.verifyToken, _courseController2.default);
 
 // students api
-Api.use('/students', _studentController2.default);
+Api.use('/students', _verifyToken.verifyToken, _studentController2.default);
 
 exports.default = Api;
-//# sourceMappingURL=api.js.map

@@ -8,8 +8,8 @@ var _sequelize = require('sequelize');
 
 var sequelize = new _sequelize.Sequelize('tech', 'root', '', {
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'mysql',
+  logging: false
 });
 
 exports.default = sequelize;
-//# sourceMappingURL=dbInstance.js.map

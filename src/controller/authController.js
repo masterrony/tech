@@ -5,9 +5,9 @@ import { auth } from '../model/actions/UserModel'
 const authController = Router()
 
 authController.post('/', (req, res) => {
-	const { password, username } = req.body
-  if(password != process.env.PASSWORD || username != process.env.USERNAME)
-    return res.json({ scs: 0 })
+  const { password, username } = req.body
+  if(password != process.env.APP_PASSWORD || username != process.env.APP_USERNAME)
+    return res.status(403).json({ scs: 0 })
 
   const token = sign(
     { iat: Math.floor(Date.now() / 1000) },
@@ -15,7 +15,7 @@ authController.post('/', (req, res) => {
     { expiresIn: '12h' }
   )
 
-  return res.json({ scs:1, token })
+  return res.status(200).json({ scs:1, token })
 })
 
 export default authController

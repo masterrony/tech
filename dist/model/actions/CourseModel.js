@@ -173,4 +173,3 @@ var deleteOneCourse = exports.deleteOneCourse = function () {
     return _ref9.apply(this, arguments);
   };
 }();
-//# sourceMappingURL=CourseModel.js.map

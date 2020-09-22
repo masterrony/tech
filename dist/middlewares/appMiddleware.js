@@ -34,4 +34,3 @@ AppMiddleware.use(_bodyParser2.default.urlencoded({ extended: false }));
 AppMiddleware.use(_express2.default.static('public'));
 
 exports.default = AppMiddleware;
-//# sourceMappingURL=appMiddleware.js.map

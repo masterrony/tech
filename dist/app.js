@@ -47,4 +47,3 @@ var PORT = process.env.PORT || 3333;
 server.listen(PORT, function () {
   console.log('server is running on port : ' + PORT);
 });
-//# sourceMappingURL=app.js.map

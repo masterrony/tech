@@ -43,4 +43,3 @@ var Student = _dbInstance2.default.define('Student', {
 
 exports.Course = Course;
 exports.Student = Student;
-//# sourceMappingURL=index.js.map

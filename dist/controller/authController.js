@@ -17,12 +17,11 @@ authController.post('/', function (req, res) {
       password = _req$body.password,
       username = _req$body.username;
 
-  if (password != process.env.PASSWORD || username != process.env.USERNAME) return res.json({ scs: 0 });
+  if (password != process.env.APP_PASSWORD || username != process.env.APP_USERNAME) return res.status(403).json({ scs: 0 });
 
   var token = (0, _jsonwebtoken.sign)({ iat: Math.floor(Date.now() / 1000) }, process.env.APP_KEY, { expiresIn: '12h' });
 
-  return res.json({ scs: 1, token: token });
+  return res.status(200).json({ scs: 1, token: token });
 });
 
 exports.default = authController;
-//# sourceMappingURL=authController.js.map

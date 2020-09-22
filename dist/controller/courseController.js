@@ -16,7 +16,7 @@ var courseController = (0, _express.Router)();
 
 courseController.get('/', function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res) {
-    var skip, limit, sort, order, _ref2, courses, totalCount;
+    var skip, limit, sort, order, _ref2, courses, count;
 
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -32,9 +32,9 @@ courseController.get('/', function () {
           case 6:
             _ref2 = _context.sent;
             courses = _ref2.courses;
-            totalCount = _ref2.totalCount;
+            count = _ref2.count;
 
-            res.header('X-Total-Count', totalCount);
+            res.header('X-Total-Count', count);
             return _context.abrupt('return', res.send(courses));
 
           case 11:
@@ -159,4 +159,3 @@ courseController.delete('/:id', function () {
 }());
 
 exports.default = courseController;
-//# sourceMappingURL=courseController.js.map

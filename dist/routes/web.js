@@ -17,4 +17,3 @@ Web.get(['/', '/#/courses', '/#/students/'], function (req, res) {
 });
 
 exports.default = Web;
-//# sourceMappingURL=web.js.map
